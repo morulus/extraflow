@@ -1,0 +1,30 @@
+{
+  "name": "@morulus/overflow",
+  "version": "1.0.0",
+  "description": "Overflow sequence",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/morulus/overflow.git"
+  },
+  "keywords": [
+    "overflow",
+    "flow",
+    "sequence"
+  ],
+  "author": "Vladimir Morulus <vladimirmorulus@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/morulus/overflow/issues"
+  },
+  "homepage": "https://github.com/morulus/overflow#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1"
+  }
+}
