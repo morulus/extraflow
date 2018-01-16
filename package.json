@@ -1,15 +1,14 @@
 {
-  "name": "@morulus/overflow",
+  "name": "extraflow",
   "version": "1.0.0",
-  "description": "Overflow sequence",
-  "main": "lib/index.js",
+  "description": "Self-expandable sequence flow",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production babel src -d lib"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/morulus/overflow.git"
+    "url": "git+ssh://git@github.com/morulus/extraflow.git"
   },
   "keywords": [
     "overflow",
@@ -19,12 +18,10 @@
   "author": "Vladimir Morulus <vladimirmorulus@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/morulus/overflow/issues"
+    "url": "https://github.com/morulus/extraflow/issues"
   },
-  "homepage": "https://github.com/morulus/overflow#readme",
+  "homepage": "https://github.com/morulus/extraflow#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "^1.6.1"
+    "jest": "^22.1.1"
   }
 }
