@@ -1,7 +1,7 @@
-const POSTFLOW_SECRET_KEY = Symbol('POSTFLOW_SECRET_KEY')
+var POSTFLOW_SECRET_KEY = Symbol('POSTFLOW_SECRET_KEY')
 
 function createNextSequence() {
-  const sequence = []
+  var sequence = []
   sequence[POSTFLOW_SECRET_KEY] = true
   return sequence
 }
@@ -23,15 +23,15 @@ module.exports = function createPostflow(assign) {
   assign = assign || defaultAssign;
 
   return function extraflow() {
-    const initialSequence = Array.from(arguments);
+    var initialSequence = Array.from(arguments);
 
     return function enhancer(props, sequence) {
-      const isRoot = !sequence || !validateSequence(sequence)
+      var isRoot = !sequence || !validateSequence(sequence)
       if (isRoot) {
-        sequence = createNextSequence()
+        sequence = createNextSequence();
       }
-      for (let i = 0; i < initialSequence.length; i++) {
-        const payload = initialSequence[i](props, sequence)
+      for (var i = 0; i < initialSequence.length; i++) {
+        var payload = initialSequence[i](props, sequence)
         if (typeof payload === 'function') {
           sequence.push(payload)
         } else {
@@ -39,7 +39,7 @@ module.exports = function createPostflow(assign) {
         }
       }
 
-      return isRoot && sequence.length ? extraflow(...sequence)(props) : props
+      return isRoot && sequence.length ? extraflow.apply(this, sequence)(props) : props
     }
   }
 }

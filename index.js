@@ -1,3 +1,3 @@
-const factory = require('./factory.js')
+var factory = require('./factory.js')
 
 module.exports = factory();
