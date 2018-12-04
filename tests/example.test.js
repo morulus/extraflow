@@ -1,4 +1,4 @@
-const extraflow = require('..');
+const extraflow = require('../lib');
 
 describe('examples', () => {
   it('World Wide Web', () => {
